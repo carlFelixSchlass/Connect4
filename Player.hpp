@@ -1,15 +1,16 @@
 #pragma once
 #include <string>
+#include "Field.hpp"
 class Player
 {
 
 public:
-    Player(/* args */);
+    Player(std::string name, bool colour);
     virtual ~Player();
-    virtual void Lay_Coin(/*Feld,*/int pos_x) = 0;
+    virtual void Lay_Coin(Field field, int pos_x) = 0;
 
 protected:
-    std::string m_Name;
-    bool m_Colour;
+    const std::string m_Name;
+    const bool m_Colour;
 };
 
