@@ -9,7 +9,7 @@ class GuiField {
 public:
 
 
-    void printField();
+    const void printField();
 private:
 
 };

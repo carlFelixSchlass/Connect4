@@ -5,8 +5,10 @@
 #pragma once
 
 class Field {
+public:
+     int getField();
 private:
-    int gameField[3][4];
+     int gameField[3][4];
 };
 
 
