@@ -3,4 +3,4 @@ project(4Gewinnt)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(4Gewinnt main.cpp)
+add_executable(4Gewinnt main.cpp Field.cpp Field.hpp GuiField.cpp GuiField.hpp)
