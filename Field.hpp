@@ -6,9 +6,8 @@
 
 class Field {
 public:
-     int getField();
-private:
-     int gameField[3][4];
+     static int m_gameField[3][3];
+
 };
 
 
