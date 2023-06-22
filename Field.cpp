@@ -4,6 +4,3 @@
 
 #include "Field.hpp"
 
- int getField(){
-    return gameField[][];
-}
