@@ -4,9 +4,12 @@
 
 #pragma once
 
+const int ROW = 4;
+const int COLUMN = 6;
+
 class Field {
 public:
-     static int m_gameField[3][3];
+     static char m_gameField[ROW][COLUMN];
 
 };
 
