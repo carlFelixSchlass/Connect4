@@ -12,5 +12,12 @@ int main() {
     Field gameField;
 
     GUI.printField(gameField);
+
+    for (int i = 0; i < 20; i++){
+        gameField.setCoin(1, 'x');
+    }
+
+    GUI.printField(gameField);
+
     return 0;
 }
