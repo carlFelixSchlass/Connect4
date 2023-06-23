@@ -13,11 +13,8 @@
 
 class GuiField {
 public:
-    void printField(Field& field);
+    static void printField(Field& field);
 
 private:
 
 };
-
-
-
