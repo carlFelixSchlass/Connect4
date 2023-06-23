@@ -39,7 +39,7 @@ bool Field::validMove(int column) {
     }
 
     // Checks if the field is free
-    if ( field[0][column] == 'x'){
+    if ( field[0][column] == 'x' || field[0][column] == 'o'){
         return false;
     }
 
