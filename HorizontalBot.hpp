@@ -5,9 +5,9 @@ class HorizontalBot : public Player
 {
 
 public:
-//Benötigt Funktionen in Field die noch nicht existieren
+//Lays coin into the field with Horizontal Algorithm
     void layCoin(Field& field);
-//Erstellt HorizontalBot (Ruft nur Player Konstruktor auf) 
+//Constructs HorizontalBot (Same as player constructor) 
     HorizontalBot(std::string name, char coin);  
     ~HorizontalBot();
 };

@@ -6,9 +6,9 @@ class VerticalBot : public Player
 {
 
 public:
-//Benötigt Funktionen in Field die noch nicht existieren
+//Lays coin into the field with Vertical Algorithm
     void layCoin(Field& field);
-//Erstellt VerticalBot (Ruft nur Player Konstruktor auf) 
+//Constructs VerticalBot (Same as player constructor) 
     VerticalBot(std::string name, char coin);  
     ~VerticalBot();
 };

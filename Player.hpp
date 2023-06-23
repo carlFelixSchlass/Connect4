@@ -5,10 +5,10 @@ class Player
 {
 
 public:
-//Konstruktor Player
+//Constructs Player with setting name and coin
     Player(std::string name, char coin); 
     virtual ~Player();               
-//Virtuelle Funktion, die erst in den Unteren Klassen definiert wird     
+//Virtual function, which differs from player to player
     virtual void layCoin(Field field){} 
 
 protected:

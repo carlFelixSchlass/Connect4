@@ -5,9 +5,9 @@ class RandomBot : public Player
 {
 
 public:
-//Benötigt Funktionen in Field die noch nicht existieren
+//Lays coin into the field with Random Algorithm
     void layCoin(Field& field);
-//Erstellt HorizontalBot (Ruft nur Player Konstruktor auf) 
+//Constructs RandomBot (Same as player constructor) 
     RandomBot(std::string name, char coin);  
     ~RandomBot();
 };
