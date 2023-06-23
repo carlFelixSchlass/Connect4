@@ -11,35 +11,36 @@ int main() {
     GuiField GUI;
     Field gameField;
 
-    GUI.printField(gameField);
-
-    for (int i = 0; i < 5; i++){
-        gameField.layCoin(2, 'x');
+    for (int i = 0; i < 8; i++) {
+        gameField.layCoin(5 - i, 'i');
+        gameField.layCoin(6 - i, 'i');
+        gameField.layCoin(7 - i, 'i');
+        gameField.layCoin(8 - i, 'i');
     }
-
     for (int i = 0; i < 4; i++){
+        gameField.layCoin(5-i, 'i');
+        gameField.layCoin(6-i, 'i');
+        gameField.layCoin(7-i, 'i');
+        gameField.layCoin(8-i, 'i');
+    }
+
+        gameField.layCoin(2, 'o');
         gameField.layCoin(3, 'o');
-    }
-
-    for (int i = 0; i < 8; i++){
-        gameField.layCoin(7, 'x');
-    }
-
-    for (int i = 0; i < 3; i++){
-        gameField.layCoin(8, 'o');
-    }
-
-    for (int i = 0; i < 5; i++){
-        gameField.layCoin(3, 'x');
-        gameField.layCoin(4, 'x');
+        gameField.layCoin(4, 'o');
         gameField.layCoin(5, 'o');
-    }
 
-    for (int i = 0; i < 5; i++){
-        gameField.layCoin(6, 'o');
-    }
+
+
 
     GUI.printField(gameField);
 
-    return 0;
+
+
+    if (gameField.winCondition('x')){
+        std::cout << "Der Spieler mit dem Zeichen 'x' hat gewonnen!" << std::endl;
+    }
+    else if (gameField.winCondition('o')){
+        std::cout << "Der Spieler mit dem Zeichen '0' hat gewonnen!" << std::endl;
+    }
+
 }
