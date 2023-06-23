@@ -1,7 +1,7 @@
 #include "Human.hpp"
 
-Human::Human(std::string name, bool colour):
-    Player(name, colour)
+Human::Human(std::string name, char coin):
+    Player(name, coin)
 {
 }
 
