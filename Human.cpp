@@ -13,7 +13,11 @@ Human::~Human()
 void Human::layCoin(Field& field)
 {
     int f_column;
-    std::cout << m_Name << ", wo wollen Sie ihren Stein setzen?" << std::endl << std::endl;
-    std::cin >> f_column;
+    do
+    {
+        std::cout << m_Name << ", wo wollen Sie ihren Stein setzen?" << std::endl << std::endl;
+        std::cin >> f_column;
+    } while (!(field.validMove(f_column)));
     field.layCoin(f_column, m_Coin);
+    
 }
