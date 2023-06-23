@@ -12,6 +12,8 @@ public:
 //Virtual function, which differs from player to player
     virtual void layCoin(Field& field){}
 
+    std::string getName();
+
 protected:
     const std::string m_Name;
     const char m_Coin;

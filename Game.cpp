@@ -36,7 +36,13 @@ void Game::playGame(){
 
         if(gamefield.winCondition('o') || gamefield.winCondition('x')){
             won = true;
-            std::cout << "Spiel gewonnen!" << std::endl;
+            if (gameCount % 2 == 0){
+                std::cout << player2.getName() << " hat das Spiel gewonnen!" << std::endl;
+            }
+            else if (gameCount % 2 != 0){
+                std::cout << player1.getName() << " hat das Spiel gewonnen!" << std::endl;
+            }
+
             break;
         }
 

@@ -13,3 +13,7 @@ Player::Player()
 Player::~Player()
 {
 }
+
+std::string Player::getName() {
+    return m_Name;
+}
