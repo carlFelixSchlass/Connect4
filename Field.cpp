@@ -8,7 +8,7 @@ std::vector<std::vector<char>>& Field::getField() {
     return field;
 }
 
-void Field::setCoin(int column, char coin) {
+void Field::layCoin(int column, char coin) {
     column -= 1;
 
     // Check if column is a valid place to set the coin

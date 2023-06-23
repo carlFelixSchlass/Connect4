@@ -21,7 +21,7 @@ public:
     const int getColumn() const;
 
     // Sets a coin in the field (already checks if valid move)
-    void setCoin(int column, char coin);
+    void layCoin(int column, char coin);
 
     // Checks if this move is valid
     bool validMove(int column);
