@@ -29,6 +29,7 @@ public:
 
 private:
     std::vector<std::vector<char>> field;
+
 };
 
 

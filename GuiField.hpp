@@ -5,12 +5,12 @@
 #pragma once
 #include "Field.hpp"
 
-
+#define BLUE    "\033[34m"      /* Blauer Text */
+#define GREEN   "\033[32m"      /* Grüner Text */
+#define RESET   "\033[0m"       /* Farbe zurücksetzen */
 
 class GuiField {
 public:
-    //void fillField();
-
     void printField(Field& field);
 
 private:
