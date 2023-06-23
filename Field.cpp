@@ -54,14 +54,55 @@ bool Field::validMove(int column) {
 bool Field::winCondition(char x){
     // check horizontal
     for(int i = 0; i < ROW; i++){
-
+        for (int j = 0; j < COLUMN - 4; j++){
+            if (field[i][j] == x &&
+                field[i][j + 1] == x &&
+                field[i][j + 2] == x &&
+                field[i][j + 3] == x){
+                return true;
+            }
+        }
     }
+
     // check vertical
+    for(int i = 0; i < ROW - 4; i++)
+    {
+        for (int j = 0; j < COLUMN; j++){
+            if (field[i][j] == x &&
+                field[i + 1][j] == x &&
+                field[i + 2][j] == x &&
+                field[i + 3][j] == x){
+                return true;
+            }
+        }
+    }
 
     // check diagonal LT -> RB
+    for(int i = ROW-1; i >= 3; i--){
+        for (int j = 0; j <= COLUMN - 4; j++){
+            if (field[i][j] == x &&
+                field[i - 1][j + 1] == x &&
+                field[i - 2][j + 2] == x &&
+                field[i - 3][j + 3] == x){
+                return true;
+            }
+        }
+    }
 
     // check diagonal RT -> LB
+    for(int i = 0; i <= ROW - 4; i++){
+        for (int j = 0; j <= COLUMN - 4; j++){
+            if (field[i][j] == x &&
+                field[i + 1][j + 1] == x &&
+                field[i + 2][j + 2] == x &&
+                field[i + 3][j + 3] == x){
+                return true;
+            }
+        }
+    }
 }
-
+/*
+     *
+     */
 
 
