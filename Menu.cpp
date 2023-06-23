@@ -7,7 +7,7 @@
 #include "ProBot.hpp"
 #include <iostream>
 
-int Menu::StartMenu()
+int Menu::startMenu()
 {
     std::cout << "Das ist das geilste Game überhaupt" << std::endl;
     std::cout << "Wie viele Spieler wollen spielen?" << std::endl << std::endl;
@@ -29,14 +29,14 @@ int Menu::StartMenu()
     }
 }
 
-Player Menu::GeneratePlayer()
+void Menu::GeneratePlayer(Player& playe_r)
 {
     int ModeChoicePlayer = 0;
     std::string PlayerName;
     char PlayerCoin;
 
-    //do
-    //{
+    do
+    {
 
     std::cout << "Spieler wähle deinen Modus:" << std::endl << std::endl;
     std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
@@ -52,35 +52,40 @@ Player Menu::GeneratePlayer()
 
     std::cout << "Welches Zeichen willst du spielen?" << std::endl;
     std::cin >> PlayerCoin;
-    Player player(PlayerName, PlayerCoin);
-    return player;
-    /*
+
     switch (ModeChoicePlayer)
     {
     case 1:
-        Human player(PlayerName, PlayerCoin);
-        return player;
-        break;
+        {
+            Human player(PlayerName, PlayerCoin);
+            break;
+        }
     case 2:
-        HorizontalBot player(PlayerName, PlayerCoin);
-        return player;
-        break;
+        {
+            HorizontalBot player(PlayerName, PlayerCoin);
+            //return player;
+            break;
+        }
     case 3:
-        VerticalBot player(PlayerName, PlayerCoin);
-        return player;
-        break;
+        {
+            VerticalBot player(PlayerName, PlayerCoin);
+            //return player;
+            break;
+        }
     case 4:
-        RandomBot player(PlayerName, PlayerCoin);
-        return player;
-        break;
+        {
+            RandomBot player(PlayerName, PlayerCoin);
+            //return player;
+            break;
+        }   
     case 5:
-        ProBot player(PlayerName, PlayerCoin);
-        return player;
-        break;
+        {
+            ProBot player(PlayerName, PlayerCoin);
+            // return player;
+            break;
+        }
     default:
         break;
     }
     } while (0<ModeChoicePlayer<6);
-    */
-    
 }

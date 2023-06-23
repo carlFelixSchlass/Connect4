@@ -7,7 +7,7 @@ private:
     
 public:
 //Starts the Game and returns the Number of Players
-    static int StartMenu(); 
+    static int startMenu(); 
 //Returns a Player. Which kind of Player is decided via Interaction
-    static Player GeneratePlayer(); 
+    static void GeneratePlayer(Player& playe_r); 
 };

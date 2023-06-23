@@ -2,10 +2,13 @@
 #include "GuiField.hpp"
 #include "Field.hpp"
 #include "Menu.hpp"
+#include "Player.hpp"
+#include "Human.hpp"
 
 
 int main() {
-    Menu::StartMenu();
+    Menu::startMenu();
+
 
     return 0;
 }

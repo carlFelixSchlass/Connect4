@@ -6,7 +6,8 @@ class Player
 
 public:
 //Constructs Player with setting name and coin
-    Player(std::string name, char coin); 
+    Player(std::string name, char coin);
+    Player(); 
     virtual ~Player();               
 //Virtual function, which differs from player to player
     virtual void layCoin(Field& field){}
