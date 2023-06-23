@@ -6,6 +6,8 @@ class Menu
 private:
     
 public:
-    int StartMenu(); //Leitet das Spiel ein und gibt Anzahl der Spieler zurück
-    Player GeneratePlayer(); //Gibt einen Player zurück, dessen Art(Human/Bot) Abgefragt wurde
+//Leitet das Spiel ein und gibt Anzahl der Spieler zurück
+    static int StartMenu(); 
+//Gibt einen Player zurück, dessen Art(Human/Bot) Abgefragt wurde
+    static Player GeneratePlayer(); 
 };

@@ -5,9 +5,11 @@ class Player
 {
 
 public:
-    Player(std::string name, bool colour); //Konstruktor Player
-    virtual ~Player();                     
-    virtual void Lay_Coin(Field field, int pos_x); //Virtuelle Funktion, die erst in den Unteren Klassen definiert wird
+//Konstruktor Player
+    Player(std::string name, bool colour); 
+    virtual ~Player();               
+//Virtuelle Funktion, die erst in den Unteren Klassen definiert wird     
+    virtual void Lay_Coin(Field field, int pos_x); 
 
 protected:
     const std::string m_Name;
