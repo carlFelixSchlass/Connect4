@@ -4,3 +4,6 @@
 
 #include "Field.hpp"
 
+std::vector<std::vector<char>>& Field::getField() {
+    return field;
+}

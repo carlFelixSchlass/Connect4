@@ -9,10 +9,11 @@
 
 class GuiField {
 public:
-    void fillField();
-    const void printField();
+    //void fillField();
+
+    void printField(Field& field);
+
 private:
-    int field[ROW][COLUMN];
 
 };
 

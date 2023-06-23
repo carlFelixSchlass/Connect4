@@ -3,14 +3,24 @@
 //
 
 #pragma once
+#include <iostream>
+#include <vector>
 
-const int ROW = 4;
-const int COLUMN = 6;
+const int ROW = 4; // Zeile
+const int COLUMN = 6; // Spalte
 
 class Field {
 public:
-     static char m_gameField[ROW][COLUMN];
+    Field(){
+        field.resize(ROW, std::vector<char>(COLUMN, ' '));
 
+    }
+
+    std::vector<std::vector<char>>& getField();
+    void setCoin(int row);
+
+private:
+    std::vector<std::vector<char>> field;
 };
 
 

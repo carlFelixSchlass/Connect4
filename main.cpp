@@ -1,5 +1,7 @@
 #include <iostream>
 #include "GuiField.hpp"
+#include "Field.hpp"
+
 
 int main() {
     //std::cout << "Hello, World!aaaa" << std::endl;
@@ -7,8 +9,8 @@ int main() {
     //std::cout << "hallo";
 
     GuiField GUI;
+    Field gameField;
 
-    GUI.fillField();
-    GUI.printField();
+    GUI.printField(gameField);
     return 0;
 }
