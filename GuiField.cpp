@@ -27,14 +27,16 @@ void GuiField::printField(Field& field) {
          for (int j = 0; j < COLUMN; j++){
              std::cout << "| ";
              if(GuiField[i][j] == 'x'){
-                 std::cout << BLUE << GuiField[i][j];
+                 std::cout << BLUE << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
              else if (GuiField[i][j] == 'o'){
-                 std::cout << GREEN << GuiField[i][j];
+                 std::cout << GREEN << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
-             std::cout << " ";
+             else {
+                 std::cout << "  ";
+             }
          }
          std::cout << "|\n";
      }
