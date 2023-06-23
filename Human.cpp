@@ -9,7 +9,7 @@ Human::~Human()
 {
 
 }
-void Human::Lay_Coin(Field field, int pos_x)
+void Human::layCoin(Field field, int pos_x)
 {
     
 }
