@@ -6,10 +6,8 @@
 #include <iostream>
 #include <vector>
 
-const int ROW = 8; // Zeile
-const int COLUMN = 8; // Spalte
-const char coin1 = 'x';
-const char coin2 = 'o';
+const int ROW = 10; // Zeile
+const int COLUMN = 10; // Spalte
 
 class Field {
 public:

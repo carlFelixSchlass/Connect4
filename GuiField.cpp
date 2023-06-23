@@ -33,6 +33,5 @@ void GuiField::printField(Field& field) {
              }
          }
          std::cout << "|\n";
-
      }
 }
