@@ -30,7 +30,6 @@ void Field::setCoin(int column, char coin) {
     //GuiField::printField(field)
 }
 
-
 bool Field::validMove(int column) {
     // Check if column is a valid place to set a Coin
     // Checks if column is >0 and not > than max Column of field
@@ -44,5 +43,15 @@ bool Field::validMove(int column) {
     }
 
     return true;
+}
+
+bool Field::winCondition(char x){
+    // check horizontal
+
+    // check vertical
+
+    // check diagonal LT -> RB
+
+    // check diagonal RT -> LB
 }
 

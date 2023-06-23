@@ -27,6 +27,8 @@ public:
     // Used in setCoin to check the input
     bool validMove(int column);
 
+    bool winCondition(char x);
+
 private:
     std::vector<std::vector<char>> field;
 

@@ -6,21 +6,15 @@
 #include <iostream>
 
 void GuiField::printField(Field& field) {
-    //std::cout << BLUE << "Blauer" << GREEN "Grüner" << std::endl;
-
     const std::vector<std::vector<char>>& GuiField = field.getField();
 
     // Print out the first line where the user can see numbers of the Columns
     for (int i = 1; i < COLUMN+1; i++){
+        std::cout << UNDERLINE;
         std::cout << "| " <<  i << " ";
     }
     std::cout << "|" << std::endl;
-
-    // Print vertical line
-    for (int i = 0; i < COLUMN; i++){
-        std::cout << "----";
-    }
-    std::cout << "\n";
+    std::cout << RESET;
 
     // Print Gamefield
      for (int i = 0; i <= ROW-1; i++){
@@ -39,5 +33,6 @@ void GuiField::printField(Field& field) {
              }
          }
          std::cout << "|\n";
+
      }
 }
