@@ -55,3 +55,11 @@ bool Field::winCondition(char x){
     // check diagonal RT -> LB
 }
 
+const int Field::getRow() const {
+    return ROW;
+}
+
+const int Field::getColumn() const {
+    return COLUMN;
+}
+
