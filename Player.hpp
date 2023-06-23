@@ -9,7 +9,7 @@ public:
     Player(std::string name, char coin); 
     virtual ~Player();               
 //Virtual function, which differs from player to player
-    virtual void layCoin(Field field){} 
+    virtual void layCoin(Field& field){}
 
 protected:
     const std::string m_Name;

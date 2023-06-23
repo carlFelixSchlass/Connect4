@@ -16,19 +16,17 @@ int Menu::StartMenu()
 
     while(1)
     {
-    std::cin >> PlayerNumber;
+        std::cin >> PlayerNumber;
 
-    if(PlayerNumber > 1)
-    {
-        return PlayerNumber;
-    } 
-    else
-    {
-        std::cout << "Spielerzahl ist ungültig, Versuche es nochmal" << std::endl;
+        if(PlayerNumber > 1)
+        {
+            return PlayerNumber;
+        }
+        else
+        {
+            std::cout << "Spielerzahl ist ungültig, Versuche es nochmal" << std::endl;
+        }
     }
-
-    }
-  
 }
 
 Player Menu::GeneratePlayer()
