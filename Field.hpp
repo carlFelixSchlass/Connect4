@@ -32,8 +32,8 @@ public:
 private:
     std::vector<std::vector<char>> field;
 
-    const int ROW = 10; // Zeile
-    const int COLUMN = 10; // Spalte
+    const int ROW = 6; // Zeile
+    const int COLUMN = 6; // Spalte
 
 };
 

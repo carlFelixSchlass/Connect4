@@ -14,7 +14,7 @@
 #include "GuiField.hpp"
 #include <iostream>
 
-void playGame(){
+void Game::playGame(){
     // Bool, if the game is won (4 in a row)
     bool won = false;
 
@@ -29,9 +29,23 @@ void playGame(){
     Human player1("Mattes", 'x');
     Human player2("Carl", 'o');
     Field gamefield;
+    int gameCount = 0;
 
     while(!won){
         GuiField::printField(gamefield);
-        won = true;
+
+        if(gamefield.winCondition('o') || gamefield.winCondition('x')){
+            won = true;
+            std::cout << "Spiel gewonnen!" << std::endl;
+            break;
+        }
+
+        if (gameCount % 2 == 0){
+            player1.layCoin(gamefield);
+        }
+        else if (gameCount % 2 != 0){
+            player2.layCoin(gamefield);
+        }
+        gameCount++;
     }
 }
