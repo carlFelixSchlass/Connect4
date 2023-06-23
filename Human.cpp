@@ -5,3 +5,11 @@ Human::Human(std::string name, bool colour):
 {
 }
 
+Human::~Human()
+{
+
+}
+void Human::Lay_Coin(Field field, int pos_x)
+{
+    
+}

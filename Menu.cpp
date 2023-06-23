@@ -37,7 +37,7 @@ Player Menu::GeneratePlayer()
 
     int ModeChoicePlayer = 0;
     std::cin >> ModeChoicePlayer;
-
+    /*
     switch (ModeChoicePlayer)
     {
     case 1:
@@ -53,4 +53,7 @@ Player Menu::GeneratePlayer()
     default:
         break;
     }
+    */
+   Player x("x", 0);
+   return x;
 }

@@ -9,7 +9,7 @@ public:
     Player(std::string name, bool colour); 
     virtual ~Player();               
 //Virtuelle Funktion, die erst in den Unteren Klassen definiert wird     
-    virtual void Lay_Coin(Field field, int pos_x); 
+    virtual void Lay_Coin(Field field, int pos_x){} 
 
 protected:
     const std::string m_Name;
