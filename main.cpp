@@ -14,11 +14,11 @@ int main() {
     GUI.printField(gameField);
 
     for (int i = 0; i < 8; i++){
-        gameField.setCoin(1, 'x');
+        gameField.layCoin(1, 'x');
     }
 
     for (int i = 0; i < 8; i++){
-        gameField.setCoin(6, 'o');
+        gameField.layCoin(6, 'o');
     }
 
     GUI.printField(gameField);
