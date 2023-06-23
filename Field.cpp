@@ -48,13 +48,14 @@ bool Field::validMove(int column) {
     if ( field[0][column] == 'x' || field[0][column] == 'o'){
         return false;
     }
-
     return true;
 }
 
 bool Field::winCondition(char x){
     // check horizontal
+    for(int i = 0; i < ROW; i++){
 
+    }
     // check vertical
 
     // check diagonal LT -> RB

@@ -13,11 +13,29 @@ int main() {
 
     GUI.printField(gameField);
 
-    for (int i = 0; i < 8; i++){
-        gameField.layCoin(1, 'x');
+    for (int i = 0; i < 5; i++){
+        gameField.layCoin(2, 'x');
+    }
+
+    for (int i = 0; i < 4; i++){
+        gameField.layCoin(3, 'o');
     }
 
     for (int i = 0; i < 8; i++){
+        gameField.layCoin(7, 'x');
+    }
+
+    for (int i = 0; i < 3; i++){
+        gameField.layCoin(8, 'o');
+    }
+
+    for (int i = 0; i < 5; i++){
+        gameField.layCoin(3, 'x');
+        gameField.layCoin(4, 'x');
+        gameField.layCoin(5, 'o');
+    }
+
+    for (int i = 0; i < 5; i++){
         gameField.layCoin(6, 'o');
     }
 
