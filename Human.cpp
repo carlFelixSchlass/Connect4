@@ -15,5 +15,5 @@ void Human::layCoin(Field& field)
     int f_column;
     std::cout << m_Name << ", wo wollen Sie ihren Stein setzen?" << std::endl << std::endl;
     std::cin >> f_column;
-    field.setCoin(f_column, m_Coin);
+    field.layCoin(f_column, m_Coin);
 }
