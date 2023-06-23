@@ -11,5 +11,3 @@ public:
     Human(std::string name, char coin);  
     ~Human();
 };
-
-
