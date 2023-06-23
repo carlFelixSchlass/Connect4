@@ -31,7 +31,7 @@ void Game::playGame(){
     Field gamefield;
     int gameCount = 0;
 
-    while(!won){
+    while (won != true) {
         GuiField::printField(gamefield);
 
         if(gamefield.winCondition('o') || gamefield.winCondition('x')){

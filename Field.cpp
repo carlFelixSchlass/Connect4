@@ -65,8 +65,7 @@ bool Field::winCondition(char x){
     }
 
     // check vertical
-    for(int i = 0; i < ROW - 4; i++)
-    {
+    for(int i = 0; i <= ROW - 4; i++){
         for (int j = 0; j < COLUMN; j++){
             if (field[i][j] == x &&
                 field[i + 1][j] == x &&
@@ -100,6 +99,8 @@ bool Field::winCondition(char x){
             }
         }
     }
+
+    return false;
 }
 /*
      *
