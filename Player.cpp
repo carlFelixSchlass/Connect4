@@ -6,3 +6,6 @@ Player::Player(std::string name, bool colour)
 {
 
 }
+Player::~Player()
+{
+}
