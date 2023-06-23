@@ -1,5 +1,6 @@
 #pragma once
 #include "Player.hpp"
+#include <string>
 
 class Human : public Player
 {

@@ -1,5 +1,6 @@
 #include "Human.hpp"
 #include <iostream>
+#include <string>
 
 Human::Human(std::string name, char coin):
     Player(name, coin)
