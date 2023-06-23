@@ -4,11 +4,11 @@
 #include "Menu.hpp"
 #include "Player.hpp"
 #include "Human.hpp"
+#include "Game.hpp"
 
 
 int main() {
-    Menu::startMenu();
-
+    Game::playGame();
 
     return 0;
 }

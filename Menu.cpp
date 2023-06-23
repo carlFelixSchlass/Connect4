@@ -29,7 +29,10 @@ int Menu::startMenu()
     }
 }
 
-void Menu::GeneratePlayer(Player& playe_r)
+
+
+/*
+ * void Menu::GeneratePlayer()
 {
     int ModeChoicePlayer = 0;
     std::string PlayerName;
@@ -77,7 +80,7 @@ void Menu::GeneratePlayer(Player& playe_r)
             RandomBot player(PlayerName, PlayerCoin);
             //return player;
             break;
-        }   
+        }
     case 5:
         {
             ProBot player(PlayerName, PlayerCoin);
@@ -89,3 +92,4 @@ void Menu::GeneratePlayer(Player& playe_r)
     }
     } while (0<ModeChoicePlayer<6);
 }
+ */
