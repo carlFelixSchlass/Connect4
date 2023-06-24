@@ -10,12 +10,6 @@
 int main() {
     Game::playGame();
 
-    Field gamefield;
-
-    int i = 0;
-    bool won = false;
-    Human player1("Carl", 'x');
-
     return 0;
 }
 
