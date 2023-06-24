@@ -19,8 +19,7 @@ void Game::playGame(){
     bool won = false;
 
     // count of players
-    int playerCount = 0;
-    playerCount = Menu::startMenu();
+    Menu::startMenu();
 
     int ModeChoicePlayer = 0;
     std::string PlayerName_2;

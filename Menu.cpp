@@ -7,36 +7,34 @@
 #include "ProBot.hpp"
 #include <iostream>
 
-int Menu::startMenu()
+void Menu::startMenu()
 {
     std::cout << "Das ist das geilste Game überhaupt" << std::endl;
-    std::cout << "Wie viele Spieler wollen spielen?" << std::endl << std::endl;
-
-    int PlayerNumber = 0;
-
-    while(1)
-    {
-        std::cin >> PlayerNumber;
-
-        if(PlayerNumber > 1)
-        {
-            return PlayerNumber;
-        }
-        else
-        {
-            std::cout << "Spielerzahl ist ungültig, Versuche es nochmal" << std::endl;
-        }
-    }
 }
 
+std::string Menu::generateName()
+{
+    std::string PlayerName = "";
+    std::cout << "Gib deinen Namen ein!" << std::endl;
 
+    std::cin >> PlayerName;
+
+    return PlayerName;
+}
+
+char Menu::generateCoin()
+{
+    char PlayerCoin;
+    std::cout << "Welches Zeichen willst du spielen?" << std::endl;
+    std::cin >> PlayerCoin;
+
+    return PlayerCoin;
+}
 
 /*
  * void Menu::GeneratePlayer()
 {
     int ModeChoicePlayer = 0;
-    std::string PlayerName;
-    char PlayerCoin;
 
     do
     {
@@ -50,11 +48,7 @@ int Menu::startMenu()
     std::cin >> ModeChoicePlayer;
 
 
-    std::cout << "Gib deinen Namen ein!" << std::endl;
-    std::cin >> PlayerName;
 
-    std::cout << "Welches Zeichen willst du spielen?" << std::endl;
-    std::cin >> PlayerCoin;
 
     switch (ModeChoicePlayer)
     {
