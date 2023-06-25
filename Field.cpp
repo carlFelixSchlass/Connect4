@@ -40,7 +40,7 @@ void Field::layCoin(int column, char coin) {
 bool Field::validMove(int column) {
     // Check if column is a valid place to set a Coin
     // Checks if column is >0 and not > than max Column of field
-    if (column < 0 || column >= COLUMN){
+    if (column < 0 || column > COLUMN){
         return false;
     }
 

@@ -25,12 +25,16 @@ void Game::playGame(){
     std::string PlayerName_2;
     char PlayerCoin;
 
-    Human player1("Mattes", 'x');
+    std::string name1 = "";
+    name1 = Menu::generateName();
+    char char1 = Menu::generateCoin();
+
+    Human player1(name1, char1);
     Human player2("Carl", 'o');
     Field gamefield;
     int gameCount = 0;
 
-    while (won != true) {
+    while (!won) {
         GuiField::printField(gamefield);
 
         if(gamefield.winCondition('o') || gamefield.winCondition('x')){
@@ -53,4 +57,8 @@ void Game::playGame(){
         }
         gameCount++;
     }
+}
+
+void Game::showRules() {
+
 }

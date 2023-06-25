@@ -5,10 +5,13 @@
 #include "Player.hpp"
 #include "Human.hpp"
 #include "Game.hpp"
+#include "Application.hpp"
 
 
 int main() {
-    Game::playGame();
+    //Game::playGame();
+
+    Application::runApplication(); 
 
     return 0;
 }

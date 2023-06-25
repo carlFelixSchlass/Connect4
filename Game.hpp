@@ -7,4 +7,6 @@
 class Game {
 public:
     static void playGame();
+
+    static void showRules();
 };
