@@ -6,6 +6,7 @@
 #include "RandomBot.hpp"
 #include "ProBot.hpp"
 #include <string>
+int Player::countPlayer = 0;
 
 Player::Player(std::string name, char coin)
 :m_Name(name), m_Coin(coin)

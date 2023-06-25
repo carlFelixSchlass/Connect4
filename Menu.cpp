@@ -11,7 +11,7 @@
 std::string Menu::generateName()
 {
     std::string PlayerName = "";
-    std::cout << "Gib deinen Namen ein!" << std::endl;
+    std::cout << "Geb den Namen von Spieler " << Player::countPlayer << " ein!" << std::endl;
 
     std::cin >> PlayerName;
 
@@ -21,7 +21,7 @@ std::string Menu::generateName()
 char Menu::generateCoin()
 {
     char PlayerCoin;
-    std::cout << "Welches Zeichen willst du spielen?" << std::endl;
+    std::cout << "Welches Zeichen soll Spieler " << Player::countPlayer << " haben?" << std::endl;
     std::cin >> PlayerCoin;
 
     return PlayerCoin;
@@ -29,7 +29,7 @@ char Menu::generateCoin()
 
 int Menu::generatePlayerType() {
     int playerType;
-    std::cout << "Geben Sie den Typ ein, von dem der Player sein soll." << std::endl;
+    std::cout << "Geben Sie den Typ ein, von dem der Player " << Player::countPlayer << " sein soll." << std::endl;
     std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
     std::cout << "Modus 2: Horizontaler Bot" << std::endl;
     std::cout << "Modus 3: Vertikaler Bot" << std::endl;
@@ -48,6 +48,7 @@ int Menu::generatePlayerType() {
     {
 
     switch (type)
+    switch (ModeChoicePlayer)
     {
     case 1:
         {
