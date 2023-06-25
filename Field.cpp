@@ -102,8 +102,5 @@ bool Field::winCondition(char x){
 
     return false;
 }
-/*
-     *
-     */
 
 
