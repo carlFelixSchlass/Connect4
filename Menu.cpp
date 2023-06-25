@@ -7,10 +7,6 @@
 #include "ProBot.hpp"
 #include <iostream>
 
-void Menu::startMenu()
-{
-    std::cout << "Das ist das geilste Game überhaupt" << std::endl;
-}
 
 std::string Menu::generateName()
 {
@@ -31,6 +27,18 @@ char Menu::generateCoin()
     return PlayerCoin;
 }
 
+int Menu::generatePlayerType() {
+    char playerType;
+    std::cout << "Geben Sie den Typ ein, von dem der Player sein soll." << std::endl;
+    std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
+    std::cout << "Modus 2: Horizontaler Bot" << std::endl;
+    std::cout << "Modus 3: Vertikaler Bot" << std::endl;
+    std::cout << "Modus 4: Random Bot" << std::endl;
+    std::cout << "Modus 5: God Bot" << std::endl;
+    std::cin >> playerType;
+
+    return playerType;
+}
 /*
  * void Menu::GeneratePlayer()
 {

@@ -9,14 +9,13 @@ void Application::runApplication() {
     bool running = true;
     int choice = 0;
 
-
-
     while (running){
+        std::cout << "\n-----------------------------------" << std::endl;
         std::cout << "Herzlich willkommen zu 4 Gewinnt!" << std::endl;
         std::cout << "-----------------------------------" << std::endl;
         std::cout << "Menü: " << std::endl;
 
-        std::cout << "1 : Spiele starten " << std::endl;
+        std::cout << "1 : Spiel starten " << std::endl;
         std::cout << "2 : Regeln anzeigen " << std::endl;
         std::cout << "3 : Spiel beenden " << std::endl;
         std::cout << "Wählen Sie eine Option: " << std::endl;

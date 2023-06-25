@@ -15,45 +15,62 @@
 #include <iostream>
 
 void Game::playGame(){
-    // Bool, if the game is won (4 in a row)
+    // count of players
+    // Menu::startMenu();
+    //int ModeChoicePlayer = 0;
+
+    std::string playerName_1, playerName_2;
+    char playerCoin_1, playerCoin_2;
+    int playerType_1, playerType_2;
+    /*
+     * // console inputs for name, coin and type
+    playerName_1 = Menu::generateName();
+    playerName_2 = Menu::generateName();
+    playerCoin_1 = Menu::generateCoin();
+    playerCoin_2 = Menu::generateCoin();
+    playerType_1 = Menu::generatePlayerType();
+    playerType_2 = Menu::generatePlayerType();
+
+     playerName_1 = "Carl";
+    playerCoin_1 = 'x';
+    playerType_1 = 1;
+
+     playerCoin_2 = 'o';
+    playerName_2 = "Mattes";
+    playerType_2 = 1;
+     */
+// generate Players for the game / All types of players
+
+
+    Player* player_1 = Player::generatePlayer();
+    Player* player_2 = Player::generatePlayer();
+
+    // While loop for game logic
+    int gameCount = 0;
+    Field gamefield;
     bool won = false;
 
-    // count of players
-    Menu::startMenu();
-
-    int ModeChoicePlayer = 0;
-    std::string PlayerName_2;
-    char PlayerCoin;
-
-    std::string name1 = "";
-    name1 = Menu::generateName();
-    char char1 = Menu::generateCoin();
-
-    Human player1(name1, char1);
-    Human player2("Carl", 'o');
-    Field gamefield;
-    int gameCount = 0;
-
     while (!won) {
+
         GuiField::printField(gamefield);
 
         if(gamefield.winCondition('o') || gamefield.winCondition('x')){
             won = true;
             if (gameCount % 2 == 0){
-                std::cout << player2.getName() << " hat das Spiel gewonnen!" << std::endl;
+                std::cout << player_2->getName() << " hat das Spiel gewonnen!" << std::endl;
             }
             else if (gameCount % 2 != 0){
-                std::cout << player1.getName() << " hat das Spiel gewonnen!" << std::endl;
+                std::cout << player_1->getName() << " hat das Spiel gewonnen!" << std::endl;
             }
 
             break;
         }
 
         if (gameCount % 2 == 0){
-            player1.layCoin(gamefield);
+            player_1->layCoin(gamefield);
         }
         else if (gameCount % 2 != 0){
-            player2.layCoin(gamefield);
+            player_2->layCoin(gamefield);
         }
         gameCount++;
     }
@@ -62,3 +79,4 @@ void Game::playGame(){
 void Game::showRules() {
 
 }
+

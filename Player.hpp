@@ -14,6 +14,10 @@ public:
 
     std::string getName();
 
+    static Player* generatePlayer();
+    //    static Player* generatePlayer(std::string& playerName, char playerSymbol, int playerType);
+
+    static int countPlayers;
 protected:
     const std::string m_Name;
     const char m_Coin;
