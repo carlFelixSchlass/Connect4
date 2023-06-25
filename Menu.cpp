@@ -28,7 +28,7 @@ char Menu::generateCoin()
 }
 
 int Menu::generatePlayerType() {
-    char playerType;
+    int playerType;
     std::cout << "Geben Sie den Typ ein, von dem der Player sein soll." << std::endl;
     std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
     std::cout << "Modus 2: Horizontaler Bot" << std::endl;

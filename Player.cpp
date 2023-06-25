@@ -26,7 +26,7 @@ Player* Player::generatePlayer() {
     char coin =  Menu::generateCoin();
     std::string name = Menu::generateName();
 
-    if (type== 1){
+    if (type == 1){
         return new Human(name, coin);
     }
     //if (Menu::generatePlayerType() == 2){
