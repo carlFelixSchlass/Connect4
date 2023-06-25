@@ -34,7 +34,7 @@ int Menu::generatePlayerType() {
     std::cout << "Modus 2: Horizontaler Bot" << std::endl;
     std::cout << "Modus 3: Vertikaler Bot" << std::endl;
     std::cout << "Modus 4: Random Bot" << std::endl;
-    std::cout << "Modus 5: God Bot" << std::endl;
+    std::cout << "Modus 5: Pro Bot" << std::endl;
     std::cin >> playerType;
 
     return playerType;
@@ -47,22 +47,11 @@ int Menu::generatePlayerType() {
     do
     {
 
-    std::cout << "Spieler wähle deinen Modus:" << std::endl << std::endl;
-    std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
-    std::cout << "Modus 2: Horizontaler Bot" << std::endl;
-    std::cout << "Modus 3: Vertikaler Bot" << std::endl;
-    std::cout << "Modus 4: Random Bot" << std::endl;
-    std::cout << "Modus 5: God Bot" << std::endl;
-    std::cin >> ModeChoicePlayer;
-
-
-
-
-    switch (ModeChoicePlayer)
+    switch (type)
     {
     case 1:
         {
-            Human player(PlayerName, PlayerCoin);
+            return new Human(name, coin);
             break;
         }
     case 2:
@@ -92,6 +81,6 @@ int Menu::generatePlayerType() {
     default:
         break;
     }
-    } while (0<ModeChoicePlayer<6);
+    } while (0<type<6);
 }
  */
