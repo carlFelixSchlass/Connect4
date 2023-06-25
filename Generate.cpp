@@ -1,4 +1,4 @@
-#include "Menu.hpp"
+#include "Generate.hpp"
 #include "Player.hpp"
 #include "Human.hpp"
 #include "HorizontalBot.hpp"
@@ -8,7 +8,7 @@
 #include <iostream>
 
 
-std::string Menu::generateName()
+std::string Generate::generateName()
 {
     std::string PlayerName = "";
     std::cout << "Geb den Namen von Spieler " << Player::countPlayer << " ein!" << std::endl;
@@ -18,7 +18,7 @@ std::string Menu::generateName()
     return PlayerName;
 }
 
-char Menu::generateCoin()
+char Generate::generateCoin()
 {
     char PlayerCoin;
     std::cout << "Welches Zeichen soll Spieler " << Player::countPlayer << " haben?" << std::endl;
@@ -27,7 +27,7 @@ char Menu::generateCoin()
     return PlayerCoin;
 }
 
-int Menu::generatePlayerType() {
+int Generate::generatePlayerType() {
     int playerType;
     std::cout << "Geben Sie den Typ ein, von dem der Player " << Player::countPlayer << " sein soll." << std::endl;
     std::cout << "Modus 1: Menschlicher Spieler" << std::endl;
@@ -40,7 +40,7 @@ int Menu::generatePlayerType() {
     return playerType;
 }
 /*
- * void Menu::GeneratePlayer()
+ * void Generate::GeneratePlayer()
 {
     int ModeChoicePlayer = 0;
 

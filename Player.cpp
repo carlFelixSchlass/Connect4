@@ -1,6 +1,6 @@
 #include "Player.hpp"
 #include "Human.hpp"
-#include "Menu.hpp"
+#include "Generate.hpp"
 #include "HorizontalBot.hpp"
 #include "VerticalBot.hpp"
 #include "RandomBot.hpp"
@@ -37,13 +37,13 @@ Player* Player::generatePlayer() {
     Player::countPlayer++;
 
     int type;
-    char coin =  Menu::generateCoin();
-    std::string name = Menu::generateName();
+    char coin =  Generate::generateCoin();
+    std::string name = Generate::generateName();
 
     do
     {
 
-    type = Menu::generatePlayerType();
+    type = Generate::generatePlayerType();
     switch (type)
     {
     case 1:

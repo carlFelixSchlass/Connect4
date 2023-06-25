@@ -2,7 +2,7 @@
 // Created by Carl Felix Schlass on 23.06.23.
 //
 #include "Game.hpp"
-#include "Menu.hpp"
+#include "Generate.hpp"
 #include "Player.hpp"
 #include "Human.hpp"
 #include "HorizontalBot.hpp"
@@ -16,7 +16,7 @@
 
 void Game::playGame(){
     // count of players
-    // Menu::startMenu();
+    // Generate::startMenu();
     //int ModeChoicePlayer = 0;
 
     std::string playerName_1, playerName_2;
@@ -24,12 +24,12 @@ void Game::playGame(){
     int playerType_1, playerType_2;
     /*
      * // console inputs for name, coin and type
-    playerName_1 = Menu::generateName();
-    playerName_2 = Menu::generateName();
-    playerCoin_1 = Menu::generateCoin();
-    playerCoin_2 = Menu::generateCoin();
-    playerType_1 = Menu::generatePlayerType();
-    playerType_2 = Menu::generatePlayerType();
+    playerName_1 = Generate::generateName();
+    playerName_2 = Generate::generateName();
+    playerCoin_1 = Generate::generateCoin();
+    playerCoin_2 = Generate::generateCoin();
+    playerType_1 = Generate::generatePlayerType();
+    playerType_2 = Generate::generatePlayerType();
 
      playerName_1 = "Carl";
     playerCoin_1 = 'x';

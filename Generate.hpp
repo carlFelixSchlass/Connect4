@@ -1,13 +1,12 @@
 #pragma once
 #include "Player.hpp"
 #include <string>
-class Menu
+class Generate
 {
 
 private:
     
 public:
-
 //Generates a Name for a Player via User Interaction
     static std::string generateName();
 //Generates a Coin for a Player via User Interaction
