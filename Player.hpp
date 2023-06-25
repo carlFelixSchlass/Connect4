@@ -18,7 +18,7 @@ public:
 //Generates a Player with user Interaction
     static Player* generatePlayer();
 //Static Int to count the Total Players
-    static int countPlayers;
+    static int countPlayer;
 protected:
     const std::string m_Name;
     const char m_Coin;

@@ -34,6 +34,8 @@ char Player::getCoin()
 //Player* Player::generatePlayer(std::string &playerName, char playerSymbol, int playerType) {
 
 Player* Player::generatePlayer() {
+    Player::countPlayer++;
+
     int type;
     char coin =  Menu::generateCoin();
     std::string name = Menu::generateName();
