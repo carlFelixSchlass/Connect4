@@ -7,7 +7,7 @@
 
 void GuiField::clearConsole() {
 #ifdef _WIN32
-    system("cls"); // Für Windows
+    //system("cls"); // Für Windows
 #else
     system("clear"); // Für Unix/Linux/Mac
 #endif

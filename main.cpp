@@ -9,8 +9,9 @@
 
 
 int main() {
-    Application::runApplication();
 
+    Application::runApplication();
+    
     return 0;
 }
 
