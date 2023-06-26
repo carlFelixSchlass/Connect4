@@ -30,11 +30,11 @@ void GuiField::printField(Field& field, char player1, char player2) {
          for (int j = 0; j < field.getColumn(); j++){
              std::cout << "| ";
              if(GuiField[i][j] == player1){
-                 std::cout << BLUE << GuiField[i][j] << " ";
+                 std::cout << RED << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
              else if (GuiField[i][j] == player2){
-                 std::cout << GREEN << GuiField[i][j] << " ";
+                 std::cout << YELLOW << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
              else {
@@ -58,7 +58,7 @@ void GuiField::printPokal(Player player ) {
     std::cout << "                  .@@@                  " << std::endl;
     std::cout << "                  @@@@@                 " << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
-    std::cout << "             @@@"    << player.getName() <<"     @@@            " << std::endl;
+    std::cout << "             @@@ "<< player.getName() <<"  @@@            " << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
 }
 

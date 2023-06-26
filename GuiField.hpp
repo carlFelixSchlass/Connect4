@@ -13,6 +13,9 @@
 #define RESET   "\033[0m"       /* Farbe zurücksetzen */
 #define BLACK   "\033[30m"      /* Schwarzer Text */
 #define UNDERLINE "\033[4m"     /* Unterstrichen */
+#define YELLOW  "\033[33m"      /* Gelber Text */
+#define RED     "\033[31m"      /* Roter Text */
+
 
 class GuiField {
 public:
