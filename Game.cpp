@@ -67,7 +67,6 @@ void Game::playGame(){
                 GuiField::clearConsole();
                 GuiField::printPokal(*player_1);
             }
-
             break;
         }
 
