@@ -5,7 +5,16 @@
 #include "GuiField.hpp"
 #include <iostream>
 
+void GuiField::clearConsole() {
+#ifdef _WIN32
+    system("cls"); // Für Windows
+#else
+    system("clear"); // Für Unix/Linux/Mac
+#endif
+}
+
 void GuiField::printField(Field& field) {
+    clearConsole();
     const std::vector<std::vector<char>>& GuiField = field.getField();
 
     // Print out the first line where the user can see numbers of the Columns
@@ -35,3 +44,5 @@ void GuiField::printField(Field& field) {
          std::cout << "|\n";
      }
 }
+
+

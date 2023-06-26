@@ -1,6 +1,9 @@
 #pragma once
 #include <string>
 #include "Field.hpp"
+#define RED     "\033[31m"      /* Roter Text */
+#define RESET   "\033[0m"       /* Farbe zurücksetzen */
+
 class Player
 {
 

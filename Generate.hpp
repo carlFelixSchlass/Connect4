@@ -1,6 +1,10 @@
 #pragma once
 #include "Player.hpp"
 #include <string>
+
+#define UNDERLINE "\033[4m"     /* Unterstrichen */
+#define RESET   "\033[0m"       /* Farbe zurücksetzen */
+
 class Generate
 {
 

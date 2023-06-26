@@ -2,12 +2,15 @@
 // Created by Carl Felix Schlass on 25.06.23.
 //
 #include "Game.hpp"
+#include "GuiField.hpp"
 #include "Application.hpp"
 #include <iostream>
 
 void Application::runApplication() {
     bool running = true;
     int choice = 0;
+
+    GuiField::clearConsole();
 
     while (running){
         std::cout << "\n-----------------------------------" << std::endl;
@@ -24,7 +27,7 @@ void Application::runApplication() {
 
         switch (choice) {
             case 1:
-                std::cout << "Das Spiel wird gestartet." << std::endl;
+                std::cout << "Das Spiel wird gestartet.\n" << std::endl;
                 Game::playGame();
                 break;
             case 2:

@@ -4,6 +4,8 @@
 
 #pragma once
 #include "Field.hpp"
+#include <cstdlib>
+
 
 #define BLUE    "\033[34m"      /* Blauer Text */
 #define GREEN   "\033[32m"      /* Grüner Text */
@@ -14,6 +16,8 @@
 class GuiField {
 public:
     static void printField(Field& field);
+
+    static void clearConsole();
 
 private:
 

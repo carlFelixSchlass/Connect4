@@ -3,6 +3,7 @@
 //
 #include "GuiField.hpp"
 #include "Field.hpp"
+#include "Game.hpp"
 
 //getter
 std::vector<std::vector<char>>& Field::getField() {
@@ -45,7 +46,7 @@ bool Field::validMove(int column) {
     }
 
     // Checks if the field is free
-    if ( field[0][column] == 'x' || field[0][column] == 'o'){
+    if ( field[0][column - 1] == 'x' || field[0][column - 1] == 'o'){
         return false;
     }
     return true;

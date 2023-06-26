@@ -33,7 +33,7 @@ private:
     std::vector<std::vector<char>> field;
 
     const int ROW = 6; // Zeile
-    const int COLUMN = 6; // Spalte
+    const int COLUMN = 8; // Spalte
 
 };
 
