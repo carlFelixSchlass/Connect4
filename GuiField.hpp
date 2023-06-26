@@ -4,6 +4,7 @@
 
 #pragma once
 #include "Field.hpp"
+#include "Player.hpp"
 #include <cstdlib>
 
 
@@ -16,6 +17,8 @@
 class GuiField {
 public:
     static void printField(Field& field);
+
+    static void printPokal(Player player);
 
     static void clearConsole();
 
