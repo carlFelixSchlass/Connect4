@@ -16,7 +16,7 @@
 
 class GuiField {
 public:
-    static void printField(Field& field);
+    static void printField(Field& field, char player1, char player2);
 
     static void printPokal(Player player);
 

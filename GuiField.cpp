@@ -13,7 +13,7 @@ void GuiField::clearConsole() {
 #endif
 }
 
-void GuiField::printField(Field& field) {
+void GuiField::printField(Field& field, char player1, char player2) {
     clearConsole();
     const std::vector<std::vector<char>>& GuiField = field.getField();
 
@@ -29,11 +29,11 @@ void GuiField::printField(Field& field) {
      for (int i = 0; i <= field.getRow()-1; i++){
          for (int j = 0; j < field.getColumn(); j++){
              std::cout << "| ";
-             if(GuiField[i][j] == 'x'){
+             if(GuiField[i][j] == player1){
                  std::cout << BLUE << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
-             else if (GuiField[i][j] == 'o'){
+             else if (GuiField[i][j] == player2){
                  std::cout << GREEN << GuiField[i][j] << " ";
                  std::cout << RESET;
              }
@@ -58,7 +58,7 @@ void GuiField::printPokal(Player player ) {
     std::cout << "                  .@@@                  " << std::endl;
     std::cout << "                  @@@@@                 " << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
-    std::cout << "             @@@" << player.getName() <<"         @@@            " << std::endl;
+    std::cout << "             @@@"    << player.getName() <<"     @@@            " << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
 }
 

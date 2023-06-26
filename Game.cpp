@@ -52,7 +52,7 @@ void Game::playGame(){
 
     while (!won) {
 
-        GuiField::printField(gamefield);
+        GuiField::printField(gamefield, player_1->getCoin(), player_2->getCoin());
 
         if(gamefield.winCondition(player_1->getCoin()) || gamefield.winCondition(player_2->getCoin())){
             won = true;
