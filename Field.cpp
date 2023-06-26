@@ -17,15 +17,17 @@ const int Field::getColumn() const {
 }
 
 void Field::layCoin(int column, char coin) {
-    column -= 1;
+
 
     // Check if column is a valid place to set the coin
     // Error output if not
-    if (!validMove(column)) {
+    /*
+    if (!(validMove(column))) {
         std::cout << "Ungültiger Zug! Bitte wählen sie eine andere Spalte!" << std::endl;
         return;
     }
-
+    */
+    column -= 1;
     // Set the coin in a free space
     int row = ROW -1;
     while (row >= 0 && field[row][column] != ' ' ) {
@@ -46,7 +48,7 @@ bool Field::validMove(int column) {
     }
 
     // Checks if the field is free
-    if ( field[0][column - 1] == 'x' || field[0][column - 1] == 'o'){
+    if ( field[0][column - 1] != ' '){
         return false;
     }
     return true;
