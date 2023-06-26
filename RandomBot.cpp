@@ -21,8 +21,11 @@ void RandomBot::layCoin(Field& field)
     std::random_device rd;
     std::mt19937 generator(rd());
 
-    std::uniform_int_distribution<int> distribution(1, field.getColumn());
-    randomColumn = distribution(generator);
+    do {
+        std::uniform_int_distribution<int> distribution(1, field.getColumn());
+        randomColumn = distribution(generator);
+
+    } while (!(field.validMove(randomColumn)));
 
     std::cout << "Der Random Bot wählt seinen Spielzug    ";
 

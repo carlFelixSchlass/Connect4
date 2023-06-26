@@ -57,7 +57,7 @@ bool Field::validMove(int column) {
 bool Field::winCondition(char x){
     // check horizontal
     for(int i = 0; i < ROW; i++){
-        for (int j = 0; j < COLUMN - 4; j++){
+        for (int j = 0; j < COLUMN - 3; j++){
             if (field[i][j] == x &&
                 field[i][j + 1] == x &&
                 field[i][j + 2] == x &&
