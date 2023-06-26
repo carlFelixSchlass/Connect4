@@ -59,10 +59,13 @@ void Game::playGame(){
             if (gameCount % 2 == 0){
                 std::cout << player_2->getName() << " hat das Spiel gewonnen!" << std::endl;
                 GuiField::clearConsole();
+                GuiField::printPokal(*player_2);
+
             }
             else if (gameCount % 2 != 0){
                 std::cout << player_1->getName() << " hat das Spiel gewonnen!" << std::endl;
                 GuiField::clearConsole();
+                GuiField::printPokal(*player_1);
             }
 
             break;
