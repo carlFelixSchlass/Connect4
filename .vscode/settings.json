@@ -43,6 +43,11 @@
         "tuple": "cpp",
         "utility": "cpp",
         "numbers": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "ctime": "cpp",
+        "ratio": "cpp",
+        "semaphore": "cpp",
+        "stop_token": "cpp",
+        "thread": "cpp"
     }
 }
