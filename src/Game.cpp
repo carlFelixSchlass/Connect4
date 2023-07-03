@@ -66,7 +66,7 @@ int Game::playGame(){
             }
             break;
         }
-        if(gameCount == 34)
+        if(gameCount == 35)
         {
             return 0;
         }

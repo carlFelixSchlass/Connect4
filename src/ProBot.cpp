@@ -117,6 +117,7 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
 
     std::random_device rd;
     std::mt19937 generator(rd());
+    int counter;
 
     //Makes a random valid move which doesnt make the other person win in the next turn
     do {
@@ -124,7 +125,7 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
         move = distribution(generator);
         
         testfield = field;
-        if(testfield.validMove(move))
+        if(testfield.validMove(move) && counter <= 100)
         {
             testfield.layCoin(move, coin1);
             if(testfield.validMove(move))
@@ -136,6 +137,7 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
                 }
             }
         }
+        counter++;
     } while (!(field.validMove(move)));
 
     return move;

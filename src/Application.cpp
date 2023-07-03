@@ -15,6 +15,6 @@ void Application::runApplication(int n) {
         count++;
 }
 
-    std::cout << "So viele Spiele hat der Pro Bot gewonnen: " << wins << "von so vielen spielen:" << count << std::endl;
+    std::cout << "So viele Spiele hat der Pro Bot gewonnen: " << wins << " von so vielen spielen: " << count << std::endl;
 }
 
