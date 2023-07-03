@@ -5,10 +5,12 @@
 #include "GuiField.hpp"
 #include "Application.hpp"
 #include <iostream>
+#include <limits>
 
 void Application::runApplication() {
     bool running = true;
     int choice = 0;
+
 
     GuiField::clearConsole();
 
@@ -24,6 +26,15 @@ void Application::runApplication() {
         std::cout << "Wählen Sie eine Option: " << std::endl;
 
         std::cin >> choice;
+
+    /*
+        if(!(std::cin >> choice)) 
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            //choice = 69;
+        }
+    */
 
         switch (choice) {
             case 1:
