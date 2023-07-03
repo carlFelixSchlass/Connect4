@@ -44,7 +44,8 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
     std::vector<std::vector<char>> board = field.getField();
     Field testfield;
     testfield = field;
-
+    
+    //Looks if board is empty
     for (int i = 0; i < field.getRow(); i++)
     {
         for(int j = 0; j < field.getColumn(); j++)
@@ -59,9 +60,10 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
     {
         return move;
     }
+    //Looks for a possible Winner and either wins or prevents the other person from winning
     for(int j = 1; j <= field.getColumn(); j++)
     {
-        if(testfield.validMove(j))
+        if(field.validMove(j))
         {
             testfield.layCoin(j, coin1);
             if(testfield.winCondition(coin1))
@@ -79,22 +81,61 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
             testfield = field;
          }
     }
-    
+
+    //Looks for two enemy coins next to each other to prevent three in a row with no borders
+    for (int i = 0; i < field.getRow() ; i++)
+    {
+        for(int j = 1; j < field.getColumn()-2; j++)
+        {
+            if(board[i][j] == coin2 && board[i][j+1] == coin2)
+            {
+                if(field.validMove(j))      //logical j-1 but in the field functions it will be substrated by 1 
+                {
+                    move = j;
+                    testfield = field;
+                    if(testfield.validMove(move))
+                    {
+                        testfield.layCoin(move, coin1);
+                        if(testfield.validMove(move))
+                        {
+                            testfield.layCoin(move, coin2);
+                            if((testfield.winCondition(coin2)))
+                            {
+                                move = -1;
+                            }
+                        }
+                    }
+                    if(field.validMove(move))
+                    {
+                        return move;
+                    }
+                }
+            }
+        }
+    }
+
+
     std::random_device rd;
     std::mt19937 generator(rd());
 
+    //Makes a random valid move which doesnt make the other person win in the next turn
     do {
         std::uniform_int_distribution<int> distribution(1, field.getColumn());
         move = distribution(generator);
-        /*
+        
         testfield = field;
-        testfield.layCoin(move, coin1);
-        testfield.layCoin(move, coin2);
-        if((testfield.winCondition(coin2)))
+        if(testfield.validMove(move))
         {
-                move = -1;
+            testfield.layCoin(move, coin1);
+            if(testfield.validMove(move))
+            {
+                testfield.layCoin(move, coin2);
+                if((testfield.winCondition(coin2)))
+                {
+                    move = -1;
+                }
+            }
         }
-        */
     } while (!(field.validMove(move)));
 
     return move;
