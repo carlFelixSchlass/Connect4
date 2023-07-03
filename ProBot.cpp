@@ -90,10 +90,14 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
     do {
         std::uniform_int_distribution<int> distribution(1, field.getColumn());
         move = distribution(generator);
-
+        testfield = field;
+        testfield.layCoin(move, coin1);
+        testfield.layCoin(move, coin2);
+        if(testfield.winCondition(coin2))
+            {
+                move = -1;
+            }
     } while (!(field.validMove(move)));
-    
-    
-    
+
     return move;
 }
