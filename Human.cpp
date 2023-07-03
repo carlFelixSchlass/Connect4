@@ -18,8 +18,16 @@ void Human::layCoin(Field& field)
     {
         std::cout << std::endl << m_Name << ", wo wollen Sie ihren Stein setzen?" << std::endl
         << "Es gibt "<< field.getColumn() << " Spalten" << std::endl;
-       
+
         std::cin >> f_column;
+
+        // check if input is a number from 1 to 7
+        if(std::cin.fail()) {
+            std::cout << RED << "Ungültige Eingabe!" << RESET << std::endl;
+            std::cin.clear();
+            std::cin.ignore(1000, '\n');
+            continue;
+        }
 
         if(!(field.validMove(f_column))) std::cout << "Ungültige Spalte!" << std::endl;
 

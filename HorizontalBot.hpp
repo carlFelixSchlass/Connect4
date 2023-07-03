@@ -3,6 +3,8 @@
 
 class HorizontalBot : public Player
 {
+private:
+    //const int horizontalColumn;
 
 public:
 //Lays coin into the field with Horizontal Algorithm
