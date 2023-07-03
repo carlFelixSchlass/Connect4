@@ -56,6 +56,7 @@ void Game::playGame(){
 
         if(gamefield.winCondition(player_1->getCoin()) || gamefield.winCondition(player_2->getCoin())){
             won = true;
+            Player::countPlayer = 0;
 
             if (gameCount % 2 == 0){
                 std::cout << player_2->getName() << " hat das Spiel gewonnen!" << std::endl;

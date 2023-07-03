@@ -22,6 +22,7 @@ public:
     static Player* generatePlayer();
 //Static Int to count the Total Players
     static int countPlayer;
+
 protected:
     const std::string m_Name;
     const char m_Coin;
