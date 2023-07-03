@@ -29,6 +29,20 @@ public:
     // Looks for the wind condition (4 in a row)
     bool winCondition(char x);
 
+
+    Field& operator=(const Field& other) {
+    if (this != &other) {
+      // Führe die Zuweisung nur durch, wenn es sich nicht um dasselbe Objekt handelt
+
+      // Führe die eigentliche Zuweisungslogik durch
+      // Hier kannst du die Member-Variablen und andere Ressourcen des aktuellen Objekts entsprechend den Werten des anderen Objekts aktualisieren
+
+      // Beispiel:
+      // memberVariable = other.memberVariable;
+    }
+    return *this;
+  }
+
 private:
     std::vector<std::vector<char>> field;
 
