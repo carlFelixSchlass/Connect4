@@ -45,7 +45,7 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
     Field testfield;
     testfield = field;
     
-    //Looks if board is empty
+    //Looks if board is empty and returns 4 if so
     for (int i = 0; i < field.getRow(); i++)
     {
         for(int j = 0; j < field.getColumn(); j++)
@@ -98,7 +98,7 @@ int ProBot::bestMove(Field &field, char coin1, char coin2)
                         testfield.layCoin(move, coin1);
                         if(testfield.validMove(move))
                         {
-                            testfield.layCoin(move, coin2);
+                            testfield.layCoin(move, coin2);         //checks if this move would lead to a possibility for the other to win
                             if((testfield.winCondition(coin2)))
                             {
                                 move = -1;
