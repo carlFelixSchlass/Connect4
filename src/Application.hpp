@@ -6,7 +6,7 @@
 
 class Application {
 public:
-    static void runApplication();
+    static void runApplication(int n);
 };
 
 

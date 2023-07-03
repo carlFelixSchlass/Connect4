@@ -14,7 +14,7 @@
 #include "GuiField.hpp"
 #include <iostream>
 
-void Game::playGame(){
+int Game::playGame(){
     // count of players
     // Generate::startMenu();
     //int ModeChoicePlayer = 0;
@@ -42,8 +42,8 @@ void Game::playGame(){
 // generate Players for the game / All types of players
 
 
-    Player* player_1 = Player::generatePlayer();
-    Player* player_2 = Player::generatePlayer();
+    RandomBot player_1("Random", 'x');
+    ProBot player_2("Pro", 'o');
 
     // While loop for game logic
     int gameCount = 0;
@@ -52,33 +52,34 @@ void Game::playGame(){
 
     while (!won) {
 
-        GuiField::printField(gamefield, player_1->getCoin(), player_2->getCoin());
+        
 
-        if(gamefield.winCondition(player_1->getCoin()) || gamefield.winCondition(player_2->getCoin())){
+        if(gamefield.winCondition(player_1.getCoin()) || gamefield.winCondition(player_2.getCoin())){
             won = true;
             Player::countPlayer = 0;
 
             if (gameCount % 2 == 0){
-                std::cout << player_2->getName() << " hat das Spiel gewonnen!" << std::endl;
-                GuiField::clearConsole();
-                GuiField::printPokal(*player_2);
+                return 1;
             }
             else if (gameCount % 2 != 0){
-                std::cout << player_1->getName() << " hat das Spiel gewonnen!" << std::endl;
-                GuiField::clearConsole();
-                GuiField::printPokal(*player_1);
+                return 0;
             }
             break;
         }
+        if(gameCount == 34)
+        {
+            return 0;
+        }
 
         if (gameCount % 2 == 0){
-            player_1->layCoin(gamefield);
+            player_1.layCoin(gamefield);
         }
         else if (gameCount % 2 != 0){
-            player_2->layCoin(gamefield);
+            player_2.layCoin(gamefield);
         }
         gameCount++;
     }
+    return 0;
 }
 
 void Game::showRules() {

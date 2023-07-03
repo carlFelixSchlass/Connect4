@@ -27,23 +27,6 @@ void RandomBot::layCoin(Field& field)
 
     } while (!(field.validMove(randomColumn)));
 
-    std::cout << "Der Random Bot wählt seinen Spielzug    ";
-
-    for (int j = 0; j < 2; j++)
-    {
-        std::cout.flush();
-        std::cout << "\b\b\b   \b\b\b";
-        std::cout.flush();
-        std::this_thread::sleep_for(std::chrono::milliseconds(300));
-        std::cout.flush();
-        for (int i = 0; i < 3; i++)
-        {
-            std::cout << ".";
-            std::cout.flush();
-            std::this_thread::sleep_for(std::chrono::milliseconds(300));
-            std::cout.flush();
-        }
-    }
 
     field.layCoin(randomColumn, m_Coin);
 }

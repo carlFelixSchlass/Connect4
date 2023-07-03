@@ -10,7 +10,7 @@
 
 int main() {
 
-    Application::runApplication();
+    Application::runApplication(1000);
 
     //Player *player_1 = Player::generatePlayer();
 
