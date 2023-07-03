@@ -58,7 +58,7 @@ void GuiField::printPokal(Player player ) {
     std::cout << "                  .@@@                  " << std::endl;
     std::cout << "                  @@@@@                 " << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
-    std::cout << "             @@@ "<< player.getName() <<"  @@@            " << std::endl;
+    std::cout << player.getName() << std::endl;
     std::cout << "             @@@@@@@@@@@@@@@            " << std::endl;
 }
 

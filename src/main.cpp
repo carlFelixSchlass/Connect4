@@ -12,6 +12,11 @@ int main() {
 
     Application::runApplication();
 
+    //Player *player_1 = Player::generatePlayer();
+
+    //GuiField::printPokal(*player_1);
+
     return 0;
 }
+
 

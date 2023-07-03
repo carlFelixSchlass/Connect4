@@ -15,17 +15,10 @@ HorizontalBot::~HorizontalBot()
 }
 void HorizontalBot::layCoin(Field& field)
 {
-    int horizontalColumn = 0;
-    std::random_device rd;
-    std::mt19937 generator(rd());
+    int horizontalColumn = counter;
+    counter++;
 
-    do {
-        std::uniform_int_distribution<int> distribution(1, field.getColumn());
-        horizontalColumn = distribution(generator);
-
-    } while (!(field.validMove(horizontalColumn)));
-
-    std::cout << "Der Random Bot wählt seinen Spielzug    ";
+    std::cout << "Der Horizontal Bot wählt seinen Spielzug    ";
 
     for (int j = 0; j < 2; j++)
     {
@@ -45,3 +38,5 @@ void HorizontalBot::layCoin(Field& field)
 
     field.layCoin(horizontalColumn, m_Coin);
 }
+
+

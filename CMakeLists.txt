@@ -3,4 +3,4 @@ project(4Gewinnt)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(4Gewinnt main.cpp Field.cpp Field.hpp GuiField.cpp GuiField.hpp Human.hpp Human.cpp Player.cpp Generate.hpp Generate.cpp Game.cpp Game.hpp Application.cpp Application.hpp HorizontalBot.cpp ProBot.cpp RandomBot.cpp VerticalBot.cpp)
+add_executable(4Gewinnt src/main.cpp src/Field.cpp src/Field.hpp src/GuiField.cpp src/GuiField.hpp src/Human.hpp src/Human.cpp src/Player.cpp src/Generate.hpp src/Generate.cpp src/Game.cpp src/Game.hpp src/Application.cpp src/Application.hpp src/HorizontalBot.cpp src/ProBot.cpp src/RandomBot.cpp src/VerticalBot.cpp)

@@ -4,9 +4,10 @@
 class HorizontalBot : public Player
 {
 private:
-    //const int horizontalColumn;
+    int counter = 1;
 
 public:
+
 //Lays coin into the field with Horizontal Algorithm
     void layCoin(Field& field);
 //Constructs HorizontalBot (Same as player constructor) 
