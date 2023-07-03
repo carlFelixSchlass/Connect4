@@ -50,8 +50,6 @@ Player* Player::generatePlayer() {
     std::string name = Generate::generateName();
 
 
-
-
     switch (type) {
 
         case 1: {

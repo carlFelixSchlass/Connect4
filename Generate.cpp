@@ -22,6 +22,7 @@ char Generate::generateCoin()
 {
     char PlayerCoin;
     std::cout << UNDERLINE <<"Welches Zeichen soll Spieler " << Player::countPlayer << " haben?" << RESET << std::endl;
+
     std::cin >> PlayerCoin;
 
     return PlayerCoin;
